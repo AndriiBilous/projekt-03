@@ -21,7 +21,7 @@ if (rootElement) {
             {' '}
             {/* Wrap App with Provider */}
             <PersistGate loading={null} persistor={persistor}>
-                <Router basename="/projekt-03">
+                <Router basename="//AndriiBilous/projekt-03">
                     {' '}
                     {/* Wrap with Router and set basename */}
                     <App />
