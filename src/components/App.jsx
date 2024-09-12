@@ -25,68 +25,68 @@ const NotFoundPage = lazy(() =>
 );
 
 export const App = () => {
-    const dispatch = useDispatch();
-    const isRefreshing = useSelector(selectIsRefreshing);
+    // const dispatch = useDispatch();
+    // const isRefreshing = useSelector(selectIsRefreshing);
 
-    useEffect(() => {
-        dispatch(refreshUser());
-    }, [dispatch]);
+    // useEffect(() => {
+    //     dispatch(refreshUser());
+    // }, [dispatch]);
     return (
         <>
             <GlobalStyle /> {/* Apply global styles */}
             <Toaster position="top-center" reverseOrder={false} />
-            {!isRefreshing ? null : (
-                <Routes>
-                    <Route path="/" element={<Layout />}>
-                        <Route
-                            index
-                            element={
-                                <PublicRoute
-                                    redirectTo={routes.HOMEPAGE}
-                                    component={WelcomePage}
-                                />
-                            }
-                        />
-                        <Route
-                            path={routes.REGISTER}
-                            element={
-                                <PublicRegisterRoute
-                                    redirectTo={routes.LOGIN}
-                                    component={SignUpPage}
-                                />
-                            }
-                        />
-                        <Route
-                            path={routes.LOGIN}
-                            element={
-                                <PublicRoute
-                                    redirectTo={routes.HOMEPAGE}
-                                    component={SignInPage}
-                                />
-                            }
-                        />
-                        <Route
-                            path={routes.HOMEPAGE}
-                            element={
-                                <PrivateRoute
-                                    redirectTo={routes.LOGIN}
-                                    component={HomePage}
-                                />
-                            }
-                        />
-                        <Route
-                            path="/request-reset-email"
-                            element={<ForgotPwdPage />}
-                        />
-                        <Route
-                            path="/auth/reset-password"
-                            element={<ResetPwdPage />}
-                        />
-                        <Route path="*" element={<NotFoundPage />} />{' '}
-                        {/* Catch-all route */}
-                    </Route>
-                </Routes>
-            )}
+            {/* {!isRefreshing ? null : ( */}
+            <Routes>
+                <Route path="/" element={<Layout />}>
+                    <Route
+                        index
+                        element={
+                            <PublicRoute
+                                redirectTo={routes.HOMEPAGE}
+                                component={WelcomePage}
+                            />
+                        }
+                    />
+                    <Route
+                        path={routes.REGISTER}
+                        element={
+                            <PublicRegisterRoute
+                                redirectTo={routes.LOGIN}
+                                component={SignUpPage}
+                            />
+                        }
+                    />
+                    <Route
+                        path={routes.LOGIN}
+                        element={
+                            <PublicRoute
+                                redirectTo={routes.HOMEPAGE}
+                                component={SignInPage}
+                            />
+                        }
+                    />
+                    <Route
+                        path={routes.HOMEPAGE}
+                        element={
+                            <PrivateRoute
+                                redirectTo={routes.LOGIN}
+                                component={HomePage}
+                            />
+                        }
+                    />
+                    <Route
+                        path="/request-reset-email"
+                        element={<ForgotPwdPage />}
+                    />
+                    <Route
+                        path="/auth/reset-password"
+                        element={<ResetPwdPage />}
+                    />
+                    <Route path="*" element={<NotFoundPage />} />{' '}
+                    {/* Catch-all route */}
+                </Route>
+            </Routes>
+            {/* )} */}
         </>
     );
 };
