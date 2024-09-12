@@ -1,0 +1,83 @@
+.homeSection {
+  margin: 0 auto;
+  padding: 40px 20px;
+  width: 320px;
+
+  background-image: url("../../../public/images/Background\ element\ Home\ screen_Mobile.png");
+  background-position: center 85px;
+  background-size: contain;
+}
+
+.dailyContainer {
+  margin-bottom: 20px;
+}
+
+.BottleImgContainer {
+  margin: 0 auto;
+}
+
+.addWater {
+  margin-bottom: 48px;
+}
+
+.dateDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 8px;
+  border-radius: 10px;
+  background-color: #ecf2ff;
+  box-shadow: 0px 4px 14px 0px rgba(64, 123, 255, 0.3);
+}
+
+@media screen and (min-width: 768px) {
+  .homeSection {
+    width: 768px;
+
+    padding: 40px 32px;
+    background-image: url("../../../public/images/Background\ element\ Home\ Screen.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .dailyContainer {
+    position: absolute;
+  }
+
+  .BottleImgContainer {
+    width: 518px;
+    height: 386px;
+  }
+
+  .dateDiv {
+    padding: 32px 24px;
+  }
+}
+
+.addWater {
+  margin-bottom: 43px;
+}
+
+@media screen and (min-width: 1440px) {
+  .homeSection {
+    display: flex;
+    flex-direction: row;
+    width: 1440px;
+
+    padding: 40px 112px;
+    background-image: url("../../../public/images/Background\ element\ Main\ Page.png");
+  }
+
+  .addWater {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 592px;
+    margin-right: 32px;
+  }
+
+  .dateDiv {
+    justify-content: flex-start;
+  }
+}
